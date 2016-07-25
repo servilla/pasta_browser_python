@@ -1,0 +1,9 @@
+<h1>PASTA Identifiers values for Scope: {{ scope }}</h1>
+
+<table>
+    {% for identifier in identifiers %}
+    <tr>
+        <td>{{ scope + "." + identifier }}</td>
+    </tr>
+    {% endfor %}
+</table>
