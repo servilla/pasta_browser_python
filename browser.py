@@ -35,20 +35,20 @@ def index():
     return render_template('index.html', scopes_url=scopes_url)
 
 
-@app.route('/scopes')
+@app.route('/eml')
 def scopes():
     scopes = Scopes().get_scopes()
     return render_template('scopes.html', scopes=scopes)
 
 
-@app.route('/identifiers/<scope>')
+@app.route('/eml/<scope>')
 def identifiers(scope):
     identifiers = Identifiers(scope=scope).get_identifiers()
     return render_template('identifiers.html', scope=scope,
                            identifiers=identifiers)
 
 
-@app.route('/revisions/<scope>/<identifier>')
+@app.route('/eml/<scope>/<identifier>')
 def revisions(scope, identifier):
     revisions = Revisions(scope=scope, identifier=identifier).get_revisions()
     return render_template('revisions.html', scope=scope, identifier=identifier,
