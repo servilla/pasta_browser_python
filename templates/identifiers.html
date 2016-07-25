@@ -3,7 +3,8 @@
 <table>
     {% for identifier in identifiers %}
     <tr>
-        <td>{{ scope + "." + identifier }}</td>
+        <td><a href="/revisions/{{ scope }}/{{ identifier }}">{{ scope + "."
+            + identifier }}</a></td>
     </tr>
     {% endfor %}
 </table>
