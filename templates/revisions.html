@@ -1,0 +1,10 @@
+<h1>PASTA Revision values for Scope.Identifier: {{ scope + "." + identifier
+    }}</h1>
+
+<table>
+    {% for revision in revisions %}
+    <tr>
+        <td>{{ scope + "." + identifier + "." + revision }}</td>
+    </tr>
+    {% endfor %}
+</table>
