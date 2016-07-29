@@ -17,9 +17,10 @@
 from flask import Flask
 from flask import render_template
 from flask import url_for
-from scopes import Scopes
 from identifiers import Identifiers
 from revisions import Revisions
+
+from src.scopes import Scopes
 
 # logging.basicConfig(format='%(asctime)s %(levelname)s (%(name)s): %(message)s',
 #                     datefmt='%Y-%m-%d% H:%M:%S%z')
