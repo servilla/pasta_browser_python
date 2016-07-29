@@ -1,9 +1,25 @@
-<h1>PASTA Scope values</h1>
+{%  extends 'bootstrap/base.html' %}
 
-<table>
-    {% for scope in scopes %}
-    <tr>
-        <td><a href="/eml/{{ scope }}">{{ scope }}</a></td>
-    </tr>
-    {% endfor %}
-</table>
+{%  block title %}PASTA+{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container"></div>
+        <h1>PASTA+ Data Repository</h1>
+        <h2>Catalog Browser</h2>
+        <table>
+            {% for scope in scopes %}
+                <tr>
+                    <td><a href="/eml/{{ scope }}">{{ scope }}</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

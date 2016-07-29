@@ -17,10 +17,11 @@
 from flask import Flask
 from flask import render_template
 from flask import url_for
+from flask_bootstrap import Bootstrap
+
 from identifiers import Identifiers
 from revisions import Revisions
-
-from src.scopes import Scopes
+from scopes import Scopes
 
 # logging.basicConfig(format='%(asctime)s %(levelname)s (%(name)s): %(message)s',
 #                     datefmt='%Y-%m-%d% H:%M:%S%z')
@@ -28,7 +29,7 @@ from src.scopes import Scopes
 # logger = logging.getLogger('browser')
 
 app = Flask(__name__)
-
+bootstrap = Bootstrap(app)
 
 @app.route('/')
 def index():
