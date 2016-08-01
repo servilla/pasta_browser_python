@@ -11,10 +11,10 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container"></div>
+    <div class="container">
     <h1>PASTA+ Data Repository</h1>
     <h2>Catalog Browser</h2>
-    <table>
+    <table class="table">
         {% for identifier in identifiers %}
             <tr>
                 <td><a href="/eml/{{ scope }}/{{ identifier }}">{{ scope + "."
